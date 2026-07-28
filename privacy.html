@@ -1,309 +1,671 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Informativa sulla privacy — Formalyzer</title>
-<meta name="description" content="Informativa sulla privacy dell'applicazione Formalyzer: quali dati vengono trattati, dove sono conservati e quali diritti hai.">
-<meta name="robots" content="index,follow">
-<style>
-  :root{
-    --ink:#14181c;
-    --ink-soft:#4a545e;
-    --rule:#dfe3e7;
-    --bg:#fbfbf9;
-    --accent:#1f5f63;
-    --flag-bg:#fdf6e8;
-    --flag-rule:#c9a227;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --ink:#e8ebee;--ink-soft:#a3adb6;--rule:#2c3339;--bg:#101315;
-      --accent:#6fbfc4;--flag-bg:#1e1a10;--flag-rule:#9c8020;
-    }
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;background:var(--bg);color:var(--ink);
-    font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size:17px;line-height:1.65;
-  }
-  .wrap{max-width:44rem;margin:0 auto;padding:3.5rem 1.25rem 5rem}
-  header{border-bottom:1px solid var(--rule);padding-bottom:1.75rem;margin-bottom:2.5rem}
-  .eyebrow{
-    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--accent);font-weight:600;margin:0 0 .6rem
-  }
-  h1{font-size:2rem;line-height:1.2;margin:0 0 .75rem;letter-spacing:-.02em}
-  .meta{color:var(--ink-soft);font-size:.9rem;margin:0}
-  h2{
-    font-size:1.05rem;margin:2.75rem 0 .75rem;letter-spacing:-.01em;
-    padding-top:1.25rem;border-top:1px solid var(--rule);
-  }
-  h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:.55rem}
-  h3{font-size:.95rem;margin:1.5rem 0 .4rem;color:var(--ink)}
-  p,li{color:var(--ink);}
-  ul{padding-left:1.15rem}
-  li{margin:.35rem 0}
-  a{color:var(--accent)}
-  .lead{font-size:1.05rem;color:var(--ink-soft)}
-  .box{
-    background:var(--flag-bg);border-left:3px solid var(--flag-rule);
-    padding:1rem 1.1rem;margin:1.25rem 0;font-size:.95rem;border-radius:0 4px 4px 0;
-  }
-  .box p:first-child{margin-top:0}
-  .box p:last-child{margin-bottom:0}
-  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem}
-  th,td{text-align:left;padding:.6rem .5rem;border-bottom:1px solid var(--rule);vertical-align:top}
-  th{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
-  footer{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:.85rem}
-  code{background:var(--rule);padding:.1em .35em;border-radius:3px;font-size:.9em}
-</style>
-</head>
-<body>
-<div class="wrap">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Informativa sulla privacy — Formalyzer</title>
+    <meta
+      name="description"
+      content="Informativa sulla privacy dell'applicazione Formalyzer: quali dati vengono trattati, dove sono conservati e quali diritti hai."
+    />
+    <meta name="robots" content="index,follow" />
+    <style>
+      :root {
+        --ink: #14181c;
+        --ink-soft: #4a545e;
+        --rule: #dfe3e7;
+        --bg: #fbfbf9;
+        --accent: #1f5f63;
+        --flag-bg: #fdf6e8;
+        --flag-rule: #c9a227;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #e8ebee;
+          --ink-soft: #a3adb6;
+          --rule: #2c3339;
+          --bg: #101315;
+          --accent: #6fbfc4;
+          --flag-bg: #1e1a10;
+          --flag-rule: #9c8020;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          ui-sans-serif,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      .wrap {
+        max-width: 44rem;
+        margin: 0 auto;
+        padding: 3.5rem 1.25rem 5rem;
+      }
+      header {
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: 1.75rem;
+        margin-bottom: 2.5rem;
+      }
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin: 0 0 0.6rem;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 0 0 0.75rem;
+        letter-spacing: -0.02em;
+      }
+      .meta {
+        color: var(--ink-soft);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 2.75rem 0 0.75rem;
+        letter-spacing: -0.01em;
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--rule);
+      }
+      h2 .num {
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+        margin-right: 0.55rem;
+      }
+      h3 {
+        font-size: 0.95rem;
+        margin: 1.5rem 0 0.4rem;
+        color: var(--ink);
+      }
+      p,
+      li {
+        color: var(--ink);
+      }
+      ul {
+        padding-left: 1.15rem;
+      }
+      li {
+        margin: 0.35rem 0;
+      }
+      a {
+        color: var(--accent);
+      }
+      .lead {
+        font-size: 1.05rem;
+        color: var(--ink-soft);
+      }
+      .box {
+        background: var(--flag-bg);
+        border-left: 3px solid var(--flag-rule);
+        padding: 1rem 1.1rem;
+        margin: 1.25rem 0;
+        font-size: 0.95rem;
+        border-radius: 0 4px 4px 0;
+      }
+      .box p:first-child {
+        margin-top: 0;
+      }
+      .box p:last-child {
+        margin-bottom: 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.92rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 0.6rem 0.5rem;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+      }
+      th {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        font-weight: 600;
+      }
+      footer {
+        margin-top: 3.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--rule);
+        color: var(--ink-soft);
+        font-size: 0.85rem;
+      }
+      code {
+        background: var(--rule);
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <p class="eyebrow">Applicazione Formalyzer</p>
+        <h1>Informativa sulla privacy</h1>
+        <p class="meta">
+          Ultimo aggiornamento: 28 luglio 2026 &middot; Versione 2.0
+        </p>
+      </header>
 
-<header>
-  <p class="eyebrow">Applicazione Formalyzer</p>
-  <h1>Informativa sulla privacy</h1>
-  <p class="meta">Ultimo aggiornamento: 28 luglio 2026 &middot; Versione 2.0</p>
-</header>
+      <p class="lead">
+        Questa informativa descrive quali dati personali sono trattati tramite
+        l'applicazione mobile <strong>Formalyzer</strong> (di seguito "l'App"),
+        con quali finalità, per quanto tempo e quali diritti puoi esercitare. È
+        resa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679
+        ("GDPR").
+      </p>
 
-<p class="lead">Questa informativa descrive quali dati personali sono trattati tramite l'applicazione
-mobile <strong>Formalyzer</strong> (di seguito "l'App"), con quali finalità, per quanto tempo e quali diritti
-puoi esercitare. È resa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 ("GDPR").</p>
+      <h2><span class="num">1</span>Titolare del trattamento</h2>
+      <p>
+        Titolare del trattamento è <strong>Alessio Dessì</strong>, sviluppatore
+        individuale, Carbonia, Italia.<br />
+        Contatto per questioni relative alla privacy:
+        <a href="mailto:ing.alessio.dessi@gmail.com"
+          >ing.alessio.dessi@gmail.com</a
+        >.
+      </p>
+      <p>
+        Non è stato nominato un Responsabile della protezione dei dati (DPO),
+        non ricorrendone i presupposti di cui all'art. 37 GDPR.
+      </p>
 
-<h2><span class="num">1</span>Titolare del trattamento</h2>
-<p>
-Titolare del trattamento è <strong>Alessio Dessì</strong>, sviluppatore individuale,
-Carbonia, Italia.<br>
-Contatto per questioni relative alla privacy: <a href="mailto:ing.alessio.dessi@gmail.com">ing.alessio.dessi@gmail.com</a>.
-</p>
-<p>Non è stato nominato un Responsabile della protezione dei dati (DPO), non ricorrendone i presupposti
-di cui all'art. 37 GDPR.</p>
+      <h2><span class="num">2</span>In sintesi</h2>
+      <ul>
+        <li>
+          I dati che inserisci nell'App sono conservati
+          <strong>esclusivamente sul tuo dispositivo</strong>, in un database
+          locale cifrato.
+        </li>
+        <li>
+          Non esiste un account, una registrazione o un server del Titolare su
+          cui i tuoi dati vengano caricati.
+        </li>
+        <li>
+          L'App <strong>non contiene pubblicità</strong>, non effettua
+          profilazione e non vende né cede dati a terzi per finalità
+          commerciali.
+        </li>
+        <li>
+          Le sole informazioni che escono dal dispositivo sono quelle che invii
+          volontariamente alle funzioni di analisi assistita da intelligenza
+          artificiale e al sistema di segnalazione bug (vedi § 5).
+        </li>
+        <li>
+          Disinstallando l'App, i dati conservati sul dispositivo vengono
+          eliminati.
+        </li>
+      </ul>
 
-<h2><span class="num">2</span>In sintesi</h2>
-<ul>
-  <li>I dati che inserisci nell'App sono conservati <strong>esclusivamente sul tuo dispositivo</strong>, in un database locale cifrato.</li>
-  <li>Non esiste un account, una registrazione o un server del Titolare su cui i tuoi dati vengano caricati.</li>
-  <li>L'App <strong>non contiene pubblicità</strong>, non effettua profilazione e non vende né cede dati a terzi per finalità commerciali.</li>
-  <li>Le sole informazioni che escono dal dispositivo sono quelle che invii volontariamente alle funzioni di analisi assistita da intelligenza artificiale e al sistema di segnalazione bug (vedi § 5).</li>
-  <li>Disinstallando l'App, i dati conservati sul dispositivo vengono eliminati.</li>
-</ul>
+      <h2><span class="num">3</span>Categorie di dati trattati</h2>
 
-<h2><span class="num">3</span>Categorie di dati trattati</h2>
+      <h3>3.1 Dati inseriti dall'utente</h3>
+      <p>
+        L'App consente di registrare informazioni relative alla composizione
+        corporea e alle abitudini alimentari e di allenamento, tra cui:
+      </p>
+      <ul>
+        <li>
+          peso, altezza, circonferenze corporee, valori di composizione corporea
+          (es. massa grassa, massa magra) e relativi referti eventualmente
+          inseriti manualmente;
+        </li>
+        <li>alimenti consumati, apporto calorico e macronutrienti;</li>
+        <li>
+          attività fisica, sedute di allenamento, parametri correlati e record
+          personali;
+        </li>
+        <li>sessioni di digiuno intermittente;</li>
+        <li>note personali, obiettivi e annotazioni libere.</li>
+      </ul>
+      <p>
+        Tali dati costituiscono <strong>dati relativi alla salute</strong> ai
+        sensi dell'art. 9 GDPR e ricevono la tutela rafforzata ivi prevista.
+      </p>
 
-<h3>3.1 Dati inseriti dall'utente</h3>
-<p>L'App consente di registrare informazioni relative alla composizione corporea e alle abitudini
-alimentari e di allenamento, tra cui:</p>
-<ul>
-  <li>peso, altezza, circonferenze corporee, valori di composizione corporea (es. massa grassa, massa magra) e relativi referti eventualmente inseriti manualmente;</li>
-  <li>alimenti consumati, apporto calorico e macronutrienti;</li>
-  <li>attività fisica, sedute di allenamento, parametri correlati e record personali;</li>
-  <li>sessioni di digiuno intermittente;</li>
-  <li>note personali, obiettivi e annotazioni libere.</li>
-</ul>
-<p>Tali dati costituiscono <strong>dati relativi alla salute</strong> ai sensi dell'art. 9 GDPR e
-ricevono la tutela rafforzata ivi prevista.</p>
+      <h3>3.2 Dati importati da Google Fit</h3>
+      <p>
+        L'App ti consente, se lo desideri, di collegare il tuo account Google
+        Fit per importare automaticamente sul dispositivo dati relativi a passi,
+        sonno, frequenza cardiaca e attività fisica. L'importazione avviene
+        esclusivamente in ingresso: i dati transitano da Google Fit al database
+        locale dell'App e non vengono in alcun modo ritrasmessi a terzi né
+        caricati su server del Titolare. Puoi disattivare il collegamento in
+        qualsiasi momento dalle impostazioni dell'App. Il trattamento dei dati
+        da parte di Google Fit è disciplinato dall'informativa sulla privacy di
+        Google.
+      </p>
 
-<h3>3.2 Dati importati da Google Fit</h3>
-<p>L'App ti consente, se lo desideri, di collegare il tuo account Google Fit per importare
-automaticamente sul dispositivo dati relativi a passi, sonno, frequenza cardiaca e attività fisica.
-L'importazione avviene esclusivamente in ingresso: i dati transitano da Google Fit al database locale
-dell'App e non vengono in alcun modo ritrasmessi a terzi né caricati su server del Titolare. Puoi
-disattivare il collegamento in qualsiasi momento dalle impostazioni dell'App. Il trattamento dei dati
-da parte di Google Fit è disciplinato dall'informativa sulla privacy di Google.</p>
+      <h3>3.3 Immagini e fotografie</h3>
+      <p>
+        Se utilizzi le funzioni di acquisizione da fotocamera o galleria, le
+        immagini selezionate (ad esempio foto di alimenti, di etichette
+        nutrizionali o di referti) vengono trattate per estrarre le informazioni
+        necessarie alla funzione richiesta. L'accesso a fotocamera e galleria è
+        attivato solo su tua azione esplicita e limitato ai file che selezioni.
+      </p>
 
-<h3>3.3 Immagini e fotografie</h3>
-<p>Se utilizzi le funzioni di acquisizione da fotocamera o galleria, le immagini selezionate
-(ad esempio foto di alimenti, di etichette nutrizionali o di referti) vengono trattate per estrarre
-le informazioni necessarie alla funzione richiesta. L'accesso a fotocamera e galleria è attivato solo
-su tua azione esplicita e limitato ai file che selezioni.</p>
+      <h3>3.4 Dati tecnici</h3>
+      <p>
+        L'App non integra SDK di analytics, di tracciamento pubblicitario o di
+        attribuzione. Non vengono raccolti identificatori pubblicitari, non
+        viene raccolta la posizione geografica e non vengono raccolti dati di
+        navigazione.
+      </p>
+      <p>
+        Alla data di ultimo aggiornamento indicata in testa a questo documento
+        nessun componente pubblicitario di terze parti è presente nell'App.
+        L'eventuale futura introduzione di annunci comporterebbe il trattamento
+        di categorie di dati oggi non raccolte (identificatore pubblicitario,
+        indirizzo IP, interazioni con l'annuncio) e sarà preceduta dalla
+        pubblicazione di una nuova versione di questa informativa e
+        dall'aggiornamento della sezione "Sicurezza dei dati" sulla scheda
+        Google Play. Vedi il § 11.
+      </p>
 
-<h3>3.4 Dati tecnici</h3>
-<p>L'App non integra SDK di analytics, di tracciamento pubblicitario o di attribuzione. Non vengono
-raccolti identificatori pubblicitari, non viene raccolta la posizione geografica e non vengono
-raccolti dati di navigazione.</p>
-<p>Alla data di ultimo aggiornamento indicata in testa a questo documento nessun componente
-pubblicitario di terze parti è presente nell'App. L'eventuale futura introduzione di annunci
-comporterebbe il trattamento di categorie di dati oggi non raccolte (identificatore pubblicitario,
-indirizzo IP, interazioni con l'annuncio) e sarà preceduta dalla pubblicazione di una nuova versione
-di questa informativa e dall'aggiornamento della sezione "Sicurezza dei dati" sulla scheda Google
-Play. Vedi il § 11.</p>
+      <h3>3.5 Dati che l'App non tratta</h3>
+      <ul>
+        <li>
+          Nome, indirizzo e-mail, numero di telefono o altri dati di contatto
+          (non è previsto alcun account).
+        </li>
+        <li>
+          Dati di pagamento (gestiti, ove applicabile, esclusivamente da Google
+          Play).
+        </li>
+        <li>
+          Rubrica, SMS, registro chiamate, posizione, file diversi da quelli che
+          selezioni.
+        </li>
+      </ul>
 
-<h3>3.5 Dati che l'App non tratta</h3>
-<ul>
-  <li>Nome, indirizzo e-mail, numero di telefono o altri dati di contatto (non è previsto alcun account).</li>
-  <li>Dati di pagamento (gestiti, ove applicabile, esclusivamente da Google Play).</li>
-  <li>Rubrica, SMS, registro chiamate, posizione, file diversi da quelli che selezioni.</li>
-</ul>
+      <h2><span class="num">4</span>Dove sono conservati i dati</h2>
+      <p>
+        Tutti i dati indicati al § 3 sono memorizzati in un
+        <strong>database locale sul dispositivo</strong>, all'interno dell'area
+        di memoria riservata all'App dal sistema operativo. Il database è
+        cifrato con <strong>SQLCipher</strong> (cifratura AES-256), che protegge
+        i dati a riposo anche in caso di accesso non autorizzato al filesystem
+        del dispositivo. Il Titolare non dispone di alcuna copia di tali dati e
+        non è tecnicamente in grado di accedervi.
+      </p>
+      <p>
+        Se hai attivato il backup automatico del dispositivo (ad esempio Google
+        Backup o iCloud), una copia dei dati dell'App può essere inclusa nel
+        backup gestito dal fornitore del sistema operativo, secondo le
+        impostazioni e le informative di quest'ultimo. Puoi disattivare tale
+        comportamento dalle impostazioni del dispositivo.
+      </p>
 
-<h2><span class="num">4</span>Dove sono conservati i dati</h2>
-<p>Tutti i dati indicati al § 3 sono memorizzati in un <strong>database locale sul dispositivo</strong>,
-all'interno dell'area di memoria riservata all'App dal sistema operativo. Il database è cifrato con
-<strong>SQLCipher</strong> (cifratura AES-256), che protegge i dati a riposo anche in caso di accesso
-non autorizzato al filesystem del dispositivo. Il Titolare non dispone di alcuna copia di tali dati e
-non è tecnicamente in grado di accedervi.</p>
-<p>Se hai attivato il backup automatico del dispositivo (ad esempio Google Backup o iCloud), una copia
-dei dati dell'App può essere inclusa nel backup gestito dal fornitore del sistema operativo, secondo
-le impostazioni e le informative di quest'ultimo. Puoi disattivare tale comportamento dalle
-impostazioni del dispositivo.</p>
+      <h2>
+        <span class="num">5</span>Funzioni di intelligenza artificiale,
+        segnalazione bug e condivisione con terzi
+      </h2>
+      <div class="box">
+        <p>
+          <strong>Punto importante.</strong> Alcune funzioni dell'App (analisi
+          delle immagini, riconoscimento degli alimenti, suggerimenti e commenti
+          automatici, estrazione dati da referti scansionati) sono erogate
+          tramite un servizio di intelligenza artificiale di terze parti. Per
+          fornire queste funzioni, il contenuto che sottoponi — testo e/o
+          immagine — <strong>viene trasmesso fuori dal dispositivo</strong> al
+          fornitore del servizio.
+        </p>
+        <p>
+          Per i <strong>referti di laboratorio in formato PDF nativo</strong>,
+          l'estrazione dei biomarcatori avviene invece
+          <strong>interamente sul dispositivo</strong> senza alcuna trasmissione
+          di dati. Solo i documenti scansionati, previa oscuramento manuale dei
+          dati identificativi da parte dell'utente tramite l'apposito strumento
+          di redazione integrato nell'App, vengono inviati al servizio AI.
+        </p>
+      </div>
+      <table>
+        <tr>
+          <th>Destinatario</th>
+          <th>Dati trasmessi</th>
+          <th>Finalità</th>
+        </tr>
+        <tr>
+          <td>
+            OpenRouter Inc. (Stati Uniti) — servizio OpenRouter API
+            <br /><em
+              >(provider AI predefinito dell'App; agisce come intermediario e
+              può instradare la richiesta a un sotto-fornitore di modelli —
+              es. Google, Meta, OpenAI, Anthropic — in base al modello
+              selezionato dall'utente nelle impostazioni)</em
+            >
+          </td>
+          <td>Il testo e/o l'immagine oggetto della singola richiesta</td>
+          <td>
+            Elaborazione della risposta richiesta (analisi immagine, stima
+            nutrizionale, suggerimenti, estrazione dati da referti scansionati,
+            trascrizione vocale)
+          </td>
+        </tr>
+        <tr>
+          <td>Anthropic PBC (Stati Uniti) — servizio Claude API</td>
+          <td>Il testo e/o l'immagine oggetto della singola richiesta</td>
+          <td>
+            Elaborazione della risposta richiesta (come sopra) — solo se
+            l'utente seleziona esplicitamente Anthropic come provider nelle
+            impostazioni dell'App
+          </td>
+        </tr>
+        <tr>
+          <td>GitHub Inc. (Stati Uniti) — Issues API</td>
+          <td>
+            Testo della segnalazione bug inserito dall'utente e dati tecnici del
+            dispositivo (modello, versione OS, versione App, stack trace)
+          </td>
+          <td>Segnalazione di malfunzionamenti e miglioramento dell'App</td>
+        </tr>
+      </table>
+      <p>
+        La trasmissione avviene solo quando attivi una funzione che la richiede,
+        in forma cifrata (HTTPS), e riguarda esclusivamente il contenuto della
+        singola richiesta: non viene inviato lo storico dei tuoi dati né alcun
+        identificativo personale. La funzione di segnalazione bug trasmette
+        esclusivamente il testo che inserisci e i dati tecnici del dispositivo;
+        non include in alcun caso i tuoi dati sanitari registrati nell'App.
+      </p>
+      <p>
+        Il trasferimento verso gli Stati Uniti avviene sulla base delle garanzie
+        previste dal Capo V del GDPR (clausole contrattuali tipo adottate dalla
+        Commissione europea e misure supplementari applicate dal fornitore). I
+        fornitori operano in qualità di responsabili del trattamento e, in base
+        ai termini commerciali applicabili, non utilizzano i contenuti trasmessi
+        per l'addestramento dei propri modelli.
+      </p>
+      <div class="box">
+        <p>
+          <strong>Punto importante su OpenRouter.</strong> OpenRouter è un
+          servizio di <em>routing</em>: riceve la richiesta e la inoltra al
+          fornitore del modello AI specifico selezionato dall'utente (es.
+          <code>google/gemini</code>, <code>meta-llama/llama</code>,
+          <code>openai/gpt</code>, <code>anthropic/claude</code>). OpenRouter
+          dichiara di non utilizzare i contenuti per addestrare i propri modelli
+          interni; tuttavia <strong>i singoli sotto-fornitori del modello</strong>
+          potrebbero applicare politiche diverse. È responsabilità dell'utente
+          consultare l'informativa del fornitore del modello specifico
+          selezionato (elenco dei modelli e relative informative disponibili al
+          link sotto) e, ove previsto, attivare nei propri account
+          l'impostazione di esclusione dall'addestramento. Per contenuti
+          particolarmente sensibili si raccomanda di scegliere modelli di
+          fornitori che dichiarano esplicitamente di non utilizzare i dati in
+          input per training (es. Anthropic Claude API, selezionabile come
+          provider dedicato nelle impostazioni dell'App).
+        </p>
+      </div>
+      <p>
+        Le informative dei fornitori sono consultabili agli indirizzi:
+        <a href="https://openrouter.ai/privacy" rel="nofollow noopener"
+          >openrouter.ai/privacy</a
+        >
+        (OpenRouter),
+        <a
+          href="https://www.anthropic.com/legal/privacy"
+          rel="nofollow noopener"
+          >anthropic.com/legal/privacy</a
+        >
+        (Anthropic) e
+        <a
+          href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+          rel="nofollow noopener"
+          >docs.github.com/site-policy/privacy-policies/github-privacy-statement</a
+        >
+        (GitHub).
+      </p>
+      <p>
+        <strong
+          >Se non desideri che alcun contenuto lasci il dispositivo, non
+          utilizzare le funzioni di analisi assistita da intelligenza
+          artificiale né la funzione di segnalazione bug.</strong
+        >
+        Tutte le altre funzioni dell'App restano pienamente disponibili in
+        modalità completamente locale.
+      </p>
+      <p>
+        Oltre a quanto sopra, nessun dato viene comunicato o diffuso a terzi,
+        salvo obblighi di legge o richieste dell'autorità giudiziaria.
+      </p>
 
-<h2><span class="num">5</span>Funzioni di intelligenza artificiale, segnalazione bug e condivisione con terzi</h2>
-<div class="box">
-<p><strong>Punto importante.</strong> Alcune funzioni dell'App (analisi delle immagini, riconoscimento
-degli alimenti, suggerimenti e commenti automatici, estrazione dati da referti scansionati) sono
-erogate tramite un servizio di intelligenza artificiale di terze parti. Per fornire queste funzioni,
-il contenuto che sottoponi — testo e/o immagine — <strong>viene trasmesso fuori dal dispositivo</strong>
-al fornitore del servizio.</p>
-<p>Per i <strong>referti di laboratorio in formato PDF nativo</strong>, l'estrazione dei biomarcatori
-avviene invece <strong>interamente sul dispositivo</strong> senza alcuna trasmissione di dati. Solo i
-documenti scansionati, previa oscuramento manuale dei dati identificativi da parte dell'utente
-tramite l'apposito strumento di redazione integrato nell'App, vengono inviati al servizio AI.</p>
-</div>
-<table>
-  <tr><th>Destinatario</th><th>Dati trasmessi</th><th>Finalità</th></tr>
-  <tr>
-    <td>Anthropic PBC (Stati Uniti) — servizio Claude API</td>
-    <td>Il testo e/o l'immagine oggetto della singola richiesta</td>
-    <td>Elaborazione della risposta richiesta (analisi immagine, stima nutrizionale, suggerimenti, estrazione dati da referti scansionati)</td>
-  </tr>
-  <tr>
-    <td>GitHub Inc. (Stati Uniti) — Issues API</td>
-    <td>Testo della segnalazione bug inserito dall'utente e dati tecnici del dispositivo (modello, versione OS, versione App, stack trace)</td>
-    <td>Segnalazione di malfunzionamenti e miglioramento dell'App</td>
-  </tr>
-</table>
-<p>La trasmissione avviene solo quando attivi una funzione che la richiede, in forma cifrata (HTTPS),
-e riguarda esclusivamente il contenuto della singola richiesta: non viene inviato lo storico dei tuoi
-dati né alcun identificativo personale. La funzione di segnalazione bug trasmette esclusivamente il
-testo che inserisci e i dati tecnici del dispositivo; non include in alcun caso i tuoi dati sanitari
-registrati nell'App.</p>
-<p>Il trasferimento verso gli Stati Uniti avviene sulla base delle garanzie previste dal Capo V del
-GDPR (clausole contrattuali tipo adottate dalla Commissione europea e misure supplementari applicate
-dal fornitore). I fornitori operano in qualità di responsabili del trattamento e, in base ai termini
-commerciali applicabili, non utilizzano i contenuti trasmessi per l'addestramento dei propri modelli.
-Le informative dei fornitori sono consultabili agli indirizzi
-<a href="https://www.anthropic.com/legal/privacy" rel="nofollow noopener">anthropic.com/legal/privacy</a>
-e <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="nofollow noopener">docs.github.com/site-policy/privacy-policies/github-privacy-statement</a>.</p>
-<p><strong>Se non desideri che alcun contenuto lasci il dispositivo, non utilizzare le funzioni di
-analisi assistita da intelligenza artificiale né la funzione di segnalazione bug.</strong> Tutte le
-altre funzioni dell'App restano pienamente disponibili in modalità completamente locale.</p>
-<p>Oltre a quanto sopra, nessun dato viene comunicato o diffuso a terzi, salvo obblighi di legge o
-richieste dell'autorità giudiziaria.</p>
+      <h2><span class="num">6</span>Finalità e basi giuridiche</h2>
+      <table>
+        <tr>
+          <th>Finalità</th>
+          <th>Base giuridica</th>
+        </tr>
+        <tr>
+          <td>
+            Registrazione e visualizzazione dei tuoi dati di composizione
+            corporea, alimentazione e allenamento
+          </td>
+          <td>
+            Consenso esplicito dell'interessato — art. 6, par. 1, lett. a) e
+            art. 9, par. 2, lett. a) GDPR
+          </td>
+        </tr>
+        <tr>
+          <td>Importazione dati da Google Fit</td>
+          <td>
+            Consenso esplicito dell'interessato, manifestato attivando il
+            collegamento — art. 9, par. 2, lett. a) GDPR
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Erogazione delle funzioni di analisi assistita da intelligenza
+            artificiale
+          </td>
+          <td>
+            Consenso esplicito dell'interessato, manifestato attivando la
+            singola funzione — art. 9, par. 2, lett. a) GDPR
+          </td>
+        </tr>
+        <tr>
+          <td>Segnalazione di bug e malfunzionamenti</td>
+          <td>
+            Consenso esplicito dell'interessato, manifestato inviando la
+            segnalazione — art. 6, par. 1, lett. a) GDPR
+          </td>
+        </tr>
+        <tr>
+          <td>Sicurezza e corretto funzionamento dell'App</td>
+          <td>
+            Legittimo interesse del Titolare — art. 6, par. 1, lett. f) GDPR
+          </td>
+        </tr>
+      </table>
+      <p>
+        Il conferimento dei dati è facoltativo; il mancato conferimento comporta
+        unicamente l'impossibilità di utilizzare le funzioni corrispondenti.
+      </p>
 
-<h2><span class="num">6</span>Finalità e basi giuridiche</h2>
-<table>
-  <tr><th>Finalità</th><th>Base giuridica</th></tr>
-  <tr>
-    <td>Registrazione e visualizzazione dei tuoi dati di composizione corporea, alimentazione e allenamento</td>
-    <td>Consenso esplicito dell'interessato — art. 6, par. 1, lett. a) e art. 9, par. 2, lett. a) GDPR</td>
-  </tr>
-  <tr>
-    <td>Importazione dati da Google Fit</td>
-    <td>Consenso esplicito dell'interessato, manifestato attivando il collegamento — art. 9, par. 2, lett. a) GDPR</td>
-  </tr>
-  <tr>
-    <td>Erogazione delle funzioni di analisi assistita da intelligenza artificiale</td>
-    <td>Consenso esplicito dell'interessato, manifestato attivando la singola funzione — art. 9, par. 2, lett. a) GDPR</td>
-  </tr>
-  <tr>
-    <td>Segnalazione di bug e malfunzionamenti</td>
-    <td>Consenso esplicito dell'interessato, manifestato inviando la segnalazione — art. 6, par. 1, lett. a) GDPR</td>
-  </tr>
-  <tr>
-    <td>Sicurezza e corretto funzionamento dell'App</td>
-    <td>Legittimo interesse del Titolare — art. 6, par. 1, lett. f) GDPR</td>
-  </tr>
-</table>
-<p>Il conferimento dei dati è facoltativo; il mancato conferimento comporta unicamente
-l'impossibilità di utilizzare le funzioni corrispondenti.</p>
+      <h2><span class="num">7</span>Periodo di conservazione</h2>
+      <ul>
+        <li>
+          I dati locali sono conservati finché non li elimini tu, tramite le
+          funzioni dell'App, oppure finché non disinstalli l'App o cancelli i
+          suoi dati dalle impostazioni del dispositivo.
+        </li>
+        <li>
+          I contenuti trasmessi ai fornitori dei servizi di intelligenza
+          artificiale e segnalazione bug sono conservati da questi ultimi per il
+          tempo strettamente necessario all'elaborazione e agli obblighi di
+          sicurezza e abuso previsti dai propri termini di servizio.
+        </li>
+      </ul>
 
-<h2><span class="num">7</span>Periodo di conservazione</h2>
-<ul>
-  <li>I dati locali sono conservati finché non li elimini tu, tramite le funzioni dell'App, oppure
-      finché non disinstalli l'App o cancelli i suoi dati dalle impostazioni del dispositivo.</li>
-  <li>I contenuti trasmessi ai fornitori dei servizi di intelligenza artificiale e segnalazione bug
-      sono conservati da questi ultimi per il tempo strettamente necessario all'elaborazione e agli
-      obblighi di sicurezza e abuso previsti dai propri termini di servizio.</li>
-</ul>
+      <h2><span class="num">8</span>I tuoi diritti</h2>
+      <p>
+        In qualità di interessato puoi esercitare i diritti previsti dagli
+        articoli 15-22 GDPR: accesso, rettifica, cancellazione, limitazione,
+        opposizione, portabilità e revoca del consenso in qualsiasi momento,
+        senza pregiudizio per la liceità del trattamento effettuato prima della
+        revoca.
+      </p>
+      <p>
+        Poiché i dati risiedono esclusivamente sul tuo dispositivo, la maggior
+        parte di questi diritti è esercitabile direttamente e immediatamente
+        dall'App: puoi consultare, modificare, esportare ed eliminare i tuoi
+        dati in autonomia, in ogni momento. Per ogni ulteriore richiesta puoi
+        scrivere a
+        <a href="mailto:ing.alessio.dessi@gmail.com"
+          >ing.alessio.dessi@gmail.com</a
+        >.
+      </p>
+      <p>
+        Hai inoltre diritto di proporre reclamo al Garante per la protezione dei
+        dati personali (<a href="https://www.garanteprivacy.it" rel="noopener"
+          >garanteprivacy.it</a
+        >) o all'autorità di controllo dello Stato membro in cui risiedi.
+      </p>
 
-<h2><span class="num">8</span>I tuoi diritti</h2>
-<p>In qualità di interessato puoi esercitare i diritti previsti dagli articoli 15-22 GDPR: accesso,
-rettifica, cancellazione, limitazione, opposizione, portabilità e revoca del consenso in qualsiasi
-momento, senza pregiudizio per la liceità del trattamento effettuato prima della revoca.</p>
-<p>Poiché i dati risiedono esclusivamente sul tuo dispositivo, la maggior parte di questi diritti è
-esercitabile direttamente e immediatamente dall'App: puoi consultare, modificare, esportare ed
-eliminare i tuoi dati in autonomia, in ogni momento. Per ogni ulteriore richiesta puoi scrivere a
-<a href="mailto:ing.alessio.dessi@gmail.com">ing.alessio.dessi@gmail.com</a>.</p>
-<p>Hai inoltre diritto di proporre reclamo al Garante per la protezione dei dati personali
-(<a href="https://www.garanteprivacy.it" rel="noopener">garanteprivacy.it</a>) o all'autorità di
-controllo dello Stato membro in cui risiedi.</p>
+      <h2><span class="num">9</span>Sicurezza</h2>
+      <p>I dati sono protetti da molteplici livelli di sicurezza:</p>
+      <ul>
+        <li>
+          Il database locale è cifrato con <strong>SQLCipher</strong> (cifratura
+          AES-256), che protegge i dati a riposo anche in caso di accesso non
+          autorizzato al filesystem del dispositivo.
+        </li>
+        <li>
+          Il sistema operativo fornisce ulteriori meccanismi di isolamento delle
+          applicazioni e di cifratura della memoria.
+        </li>
+        <li>
+          Le comunicazioni verso i servizi di intelligenza artificiale e
+          segnalazione bug avvengono su canale cifrato TLS.
+        </li>
+      </ul>
+      <p>
+        Ti raccomandiamo di proteggere il dispositivo con blocco schermo e di
+        mantenere aggiornato il sistema operativo.
+      </p>
 
-<h2><span class="num">9</span>Sicurezza</h2>
-<p>I dati sono protetti da molteplici livelli di sicurezza:</p>
-<ul>
-  <li>Il database locale è cifrato con <strong>SQLCipher</strong> (cifratura AES-256), che protegge i
-      dati a riposo anche in caso di accesso non autorizzato al filesystem del dispositivo.</li>
-  <li>Il sistema operativo fornisce ulteriori meccanismi di isolamento delle applicazioni e di
-      cifratura della memoria.</li>
-  <li>Le comunicazioni verso i servizi di intelligenza artificiale e segnalazione bug avvengono su
-      canale cifrato TLS.</li>
-</ul>
-<p>Ti raccomandiamo di proteggere il dispositivo con blocco schermo e di mantenere aggiornato il
-sistema operativo.</p>
+      <h2><span class="num">10</span>Minori</h2>
+      <p>
+        L'App non è destinata a minori di 16 anni e non ne raccoglie
+        consapevolmente i dati. Se ritieni che un minore abbia utilizzato l'App,
+        i dati possono essere eliminati in qualsiasi momento disinstallandola o
+        cancellandone i dati dalle impostazioni del dispositivo.
+      </p>
 
-<h2><span class="num">10</span>Minori</h2>
-<p>L'App non è destinata a minori di 16 anni e non ne raccoglie consapevolmente i dati. Se ritieni
-che un minore abbia utilizzato l'App, i dati possono essere eliminati in qualsiasi momento
-disinstallandola o cancellandone i dati dalle impostazioni del dispositivo.</p>
+      <h2><span class="num">11</span>Pubblicità</h2>
+      <h3>11.1 Situazione attuale</h3>
+      <p>
+        L'App non mostra annunci pubblicitari, non integra SDK pubblicitari, non
+        effettua profilazione né processi decisionali automatizzati che
+        producano effetti giuridici o incidano in modo analogamente
+        significativo sull'interessato ai sensi dell'art. 22 GDPR. I dati
+        trattati non sono in alcun caso utilizzati per finalità pubblicitarie o
+        di marketing, né ceduti o venduti a terzi.
+      </p>
 
-<h2><span class="num">11</span>Pubblicità</h2>
-<h3>11.1 Situazione attuale</h3>
-<p>L'App non mostra annunci pubblicitari, non integra SDK pubblicitari, non effettua profilazione né
-processi decisionali automatizzati che producano effetti giuridici o incidano in modo analogamente
-significativo sull'interessato ai sensi dell'art. 22 GDPR. I dati trattati non sono in alcun caso
-utilizzati per finalità pubblicitarie o di marketing, né ceduti o venduti a terzi.</p>
+      <h3>11.2 Impegni in caso di introduzione futura di annunci</h3>
+      <p>
+        Qualora in futuro venissero introdotti annunci pubblicitari all'interno
+        dell'App, si applicheranno in ogni caso le seguenti garanzie, che il
+        Titolare assume come vincolanti:
+      </p>
+      <ul>
+        <li>
+          <strong
+            >Nessun dato relativo alla salute sarà utilizzato per finalità
+            pubblicitarie.</strong
+          >
+          I dati di composizione corporea, alimentazione, allenamento e ogni
+          altro dato sanitario o di fitness trattato dall'App non saranno in
+          alcun caso trasferiti, venduti o utilizzati per la pubblicazione di
+          annunci, né per la creazione di profili o segmenti di pubblico, né
+          ceduti a piattaforme pubblicitarie, data broker o rivenditori di
+          informazioni.
+        </li>
+        <li>
+          Gli annunci saranno <strong>non personalizzati</strong> o basati
+          esclusivamente sul contesto, senza alcun collegamento con i contenuti
+          registrati dall'utente nell'App.
+        </li>
+        <li>
+          Questa informativa sarà aggiornata e resa disponibile
+          <strong>prima</strong> della distribuzione della versione dell'App
+          contenente annunci, con contestuale aggiornamento della dichiarazione
+          "Sicurezza dei dati" sulla scheda Google Play.
+        </li>
+        <li>
+          Agli utenti dello Spazio economico europeo e del Regno Unito sarà
+          richiesto il <strong>consenso preventivo</strong> tramite piattaforma
+          di gestione del consenso, con possibilità di rifiuto e di revoca in
+          qualsiasi momento dalle impostazioni dell'App.
+        </li>
+      </ul>
 
-<h3>11.2 Impegni in caso di introduzione futura di annunci</h3>
-<p>Qualora in futuro venissero introdotti annunci pubblicitari all'interno dell'App, si applicheranno
-in ogni caso le seguenti garanzie, che il Titolare assume come vincolanti:</p>
-<ul>
-  <li><strong>Nessun dato relativo alla salute sarà utilizzato per finalità pubblicitarie.</strong>
-      I dati di composizione corporea, alimentazione, allenamento e ogni altro dato sanitario o di
-      fitness trattato dall'App non saranno in alcun caso trasferiti, venduti o utilizzati per la
-      pubblicazione di annunci, né per la creazione di profili o segmenti di pubblico, né ceduti a
-      piattaforme pubblicitarie, data broker o rivenditori di informazioni.</li>
-  <li>Gli annunci saranno <strong>non personalizzati</strong> o basati esclusivamente sul contesto,
-      senza alcun collegamento con i contenuti registrati dall'utente nell'App.</li>
-  <li>Questa informativa sarà aggiornata e resa disponibile <strong>prima</strong> della
-      distribuzione della versione dell'App contenente annunci, con contestuale aggiornamento della
-      dichiarazione "Sicurezza dei dati" sulla scheda Google Play.</li>
-  <li>Agli utenti dello Spazio economico europeo e del Regno Unito sarà richiesto il
-      <strong>consenso preventivo</strong> tramite piattaforma di gestione del consenso, con
-      possibilità di rifiuto e di revoca in qualsiasi momento dalle impostazioni dell'App.</li>
-</ul>
+      <h2><span class="num">12</span>Avvertenza</h2>
+      <p>
+        L'App non è un dispositivo medico e non fornisce diagnosi, terapie o
+        consulenza sanitaria. Le informazioni e i suggerimenti generati hanno
+        finalità esclusivamente informativa e non sostituiscono il parere di un
+        medico o di un professionista sanitario qualificato.
+      </p>
 
-<h2><span class="num">12</span>Avvertenza</h2>
-<p>L'App non è un dispositivo medico e non fornisce diagnosi, terapie o consulenza sanitaria. Le
-informazioni e i suggerimenti generati hanno finalità esclusivamente informativa e non sostituiscono
-il parere di un medico o di un professionista sanitario qualificato.</p>
+      <h2><span class="num">13</span>Modifiche a questa informativa</h2>
+      <p>
+        Questa informativa può essere aggiornata per adeguarla a modifiche
+        dell'App o alla normativa applicabile. La versione vigente è sempre
+        pubblicata a questo indirizzo, con indicazione della data di ultimo
+        aggiornamento. Le modifiche sostanziali saranno segnalate all'interno
+        dell'App.
+      </p>
+      <p>
+        <strong>Data di ultimo aggiornamento:</strong> 26 luglio 2026 —
+        integrazione del destinatario OpenRouter Inc. (router AI) e
+        chiarimento sul ruolo di OpenRouter come intermediario verso
+        sotto-fornitori di modelli.
+      </p>
 
-<h2><span class="num">13</span>Modifiche a questa informativa</h2>
-<p>Questa informativa può essere aggiornata per adeguarla a modifiche dell'App o alla normativa
-applicabile. La versione vigente è sempre pubblicata a questo indirizzo, con indicazione della data
-di ultimo aggiornamento. Le modifiche sostanziali saranno segnalate all'interno dell'App.</p>
+      <h2><span class="num">14</span>Contatti</h2>
+      <p>
+        Per qualsiasi domanda relativa a questa informativa o al trattamento dei
+        tuoi dati:
+        <a href="mailto:ing.alessio.dessi@gmail.com"
+          >ing.alessio.dessi@gmail.com</a
+        >.
+      </p>
 
-<h2><span class="num">14</span>Contatti</h2>
-<p>Per qualsiasi domanda relativa a questa informativa o al trattamento dei tuoi dati:
-<a href="mailto:ing.alessio.dessi@gmail.com">ing.alessio.dessi@gmail.com</a>.</p>
-
-<footer>
-  <p>Informativa sulla privacy dell'applicazione Formalyzer &middot; Versione 2.0 del 28 luglio 2026.<br>
-  Documento riferito esclusivamente all'applicazione mobile Formalyzer distribuita su Google Play.</p>
-</footer>
-
-</div>
-</body>
+      <footer>
+        <p>
+          Informativa sulla privacy dell'applicazione Formalyzer &middot;
+          Versione 2.0 del 28 luglio 2026.<br />
+          Documento riferito esclusivamente all'applicazione mobile Formalyzer
+          distribuita su Google Play.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
